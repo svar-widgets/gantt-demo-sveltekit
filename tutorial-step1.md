@@ -2,7 +2,7 @@
 
 This tutorial walks you through integrating the SVAR Gantt chart component into a SvelteKit application. We'll build it step by step, encountering and solving common issues along the way.
 
-The complete source code is available at [github.com/svar-widgets/svelte-gantt-sveltekit](https://github.com/svar-widgets/gantt-demos-svelte/tree/basic), this tutorial code covers the `basic` branch of the repo.
+The complete source code is available at [github.com/svar-widgets/gantt-demo-sveltekit](https://github.com/svar-widgets/gantt-demo-sveltekit/tree/basic), this tutorial code covers the `basic` branch of the repo.
 
 ## Creating the Project
 

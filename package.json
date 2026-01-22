@@ -15,12 +15,15 @@
 		"@sveltejs/adapter-auto": "^7.0.0",
 		"@sveltejs/kit": "^2.49.1",
 		"@sveltejs/vite-plugin-svelte": "^6.2.1",
+		"@types/better-sqlite3": "^7.6.13",
 		"svelte": "^5.45.6",
 		"svelte-check": "^4.3.4",
 		"typescript": "^5.9.3",
 		"vite": "^7.2.6"
 	},
 	"dependencies": {
-		"@svar-ui/svelte-gantt": "^2.5.0"
+		"@svar-ui/gantt-data-provider": "^2.5.0",
+		"@svar-ui/svelte-gantt": "^2.5.0",
+		"better-sqlite3": "^12.6.2"
 	}
 }
