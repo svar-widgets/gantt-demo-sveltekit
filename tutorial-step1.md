@@ -42,7 +42,6 @@ With the package installed, let's import the Gantt widget. Let's create `src/lib
 
 ```svelte
 <script lang="ts">
-  import { browser } from "$app/environment";
   import { Gantt } from "@svar-ui/svelte-gantt";
 
   const tasks = [
@@ -77,13 +76,9 @@ With the package installed, let's import the Gantt widget. Let's create `src/lib
 </script>
 
 <div style="height: 600px; width: 100%;">
-  {#if browser}
-    <Gantt {tasks} {links} {scales} />
-  {/if}
+  <Gantt {tasks} {links} {scales} />
 </div>
 ```
-
-Notice the `{#if browser}` check — the Gantt component sizes itself based on its container dimensions and renders content accordingly. Server-side rendering would produce incorrect output since the actual container size isn't known until the page loads in the browser. Skipping SSR for the Gantt avoids a wasteful double render (server pass followed by client repaint).
 
 Let's also update the page to display our component. In `src/routes/+page.svelte`:
 

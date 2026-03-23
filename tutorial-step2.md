@@ -255,11 +255,9 @@ The toolbar needs the Gantt's API reference to trigger actions. We capture it du
 
 ```svelte
 <Willow>
-  {#if browser}
     <Toolbar {api} />
     <Gantt {tasks} {links} {scales} {init} />
     <Editor {api} />
-  {/if}
 </Willow>
 ```
 
@@ -277,6 +275,8 @@ What happens when something goes wrong? There are several layers where errors ca
 
 ```svelte
 <script lang="ts">
+  import { browser } from "$app/environment";
+
   if (browser) {
     server.getData()
       .then((data) => {
@@ -334,6 +334,7 @@ If you do need a loading indicator, wrap the `getData()` promise:
 
 ```svelte
 <script lang="ts">
+  import { browser } from "$app/environment";
   let loading = $state(true);
 
   if (browser) {
@@ -410,11 +411,9 @@ Here's the full `GanttChart.svelte` with all pieces in place:
 
 <div style="height: 100%; width: 100%;">
   <Willow>
-    {#if browser}
       <Toolbar {api} />
       <Gantt {tasks} {links} {scales} {init} />
       <Editor {api} />
-    {/if}
   </Willow>
 </div>
 ```
