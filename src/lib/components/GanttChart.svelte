@@ -7,7 +7,8 @@
   let tasks = $state<any[]>([]);
   let links = $state<any[]>([]);
 
-  const server = new RestDataProvider("/api");
+  //provide url to your server
+  const server = new RestDataProvider("https://gantt-backend.svar.dev");
 
   const scales = [
     { unit: "month", step: 1, format: "%M %Y" },

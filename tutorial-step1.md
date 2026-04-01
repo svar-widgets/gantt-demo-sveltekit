@@ -105,7 +105,6 @@ The Svelte package embeds its styles directly in the components — no separate 
 
 ```svelte
 <script lang="ts">
-  import { browser } from "$app/environment";
   import { Gantt, Willow } from "@svar-ui/svelte-gantt";
 
   // ... tasks, links, scales definitions ...
@@ -113,9 +112,7 @@ The Svelte package embeds its styles directly in the components — no separate 
 
 <div style="height: 600px; width: 100%;">
   <Willow>
-    {#if browser}
       <Gantt {tasks} {links} {scales} />
-    {/if}
   </Willow>
 </div>
 ```
@@ -131,9 +128,7 @@ If you're going for a flexible layout where the Gantt should fill available spac
 ```svelte
 <div style="height: 100%; width: 100%;">
   <Willow>
-    {#if browser}
       <Gantt {tasks} {links} {scales} />
-    {/if}
   </Willow>
 </div>
 ```
@@ -177,7 +172,6 @@ The Gantt component exposes its API through a `bind:this` directive. We can capt
 
 ```svelte
 <script lang="ts">
-  import { browser } from "$app/environment";
   import { Gantt, Willow, Editor } from "@svar-ui/svelte-gantt";
 
   let api = $state<any>(null);
@@ -187,10 +181,8 @@ The Gantt component exposes its API through a `bind:this` directive. We can capt
 
 <div style="height: 100%; width: 100%;">
   <Willow>
-    {#if browser}
       <Gantt {tasks} {links} {scales} bind:this={api} />
       <Editor {api} />
-    {/if}
   </Willow>
 </div>
 ```
