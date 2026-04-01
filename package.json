@@ -22,8 +22,8 @@
 		"vite": "^7.2.6"
 	},
 	"dependencies": {
-		"@svar-ui/gantt-data-provider": "^2.5.0",
-		"@svar-ui/svelte-gantt": "^2.5.0",
+		"@svar-ui/gantt-data-provider": "^2.6.1",
+		"@svar-ui/svelte-gantt": "^2.6.1",
 		"better-sqlite3": "^12.6.2"
 	}
 }

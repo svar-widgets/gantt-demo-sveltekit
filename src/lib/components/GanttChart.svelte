@@ -29,10 +29,8 @@
 
 <div style="height: 100%; width: 100%;">
   <Willow>
-    {#if browser}
       <Toolbar {api} />
       <Gantt {tasks} {links} {scales} {init} />
       <Editor {api} />
-    {/if}
   </Willow>
 </div>
