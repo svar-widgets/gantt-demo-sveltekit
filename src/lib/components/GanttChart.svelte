@@ -97,9 +97,7 @@
 
 <div style="height: 100%; width: 100%;">
   <Willow>
-    {#if browser}
       <Gantt {tasks} {links} {scales} bind:this={api} />
       <Editor {api} />
-    {/if}
   </Willow>
 </div>

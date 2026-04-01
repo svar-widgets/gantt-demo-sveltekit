@@ -42,7 +42,6 @@ With the package installed, let's import the Gantt widget. Let's create `src/lib
 
 ```svelte
 <script lang="ts">
-  import { browser } from "$app/environment";
   import { Gantt } from "@svar-ui/svelte-gantt";
 
   const tasks = [
@@ -77,13 +76,9 @@ With the package installed, let's import the Gantt widget. Let's create `src/lib
 </script>
 
 <div style="height: 600px; width: 100%;">
-  {#if browser}
     <Gantt {tasks} {links} {scales} />
-  {/if}
 </div>
 ```
-
-Notice the `{#if browser}` check — the Gantt component sizes itself based on its container dimensions and renders content accordingly. Server-side rendering would produce incorrect output since the actual container size isn't known until the page loads in the browser. Skipping SSR for the Gantt avoids a wasteful double render (server pass followed by client repaint).
 
 Let's also update the page to display our component. In `src/routes/+page.svelte`:
 
@@ -110,7 +105,6 @@ The Svelte package embeds its styles directly in the components — no separate 
 
 ```svelte
 <script lang="ts">
-  import { browser } from "$app/environment";
   import { Gantt, Willow } from "@svar-ui/svelte-gantt";
 
   // ... tasks, links, scales definitions ...
@@ -118,9 +112,7 @@ The Svelte package embeds its styles directly in the components — no separate 
 
 <div style="height: 600px; width: 100%;">
   <Willow>
-    {#if browser}
       <Gantt {tasks} {links} {scales} />
-    {/if}
   </Willow>
 </div>
 ```
@@ -136,9 +128,7 @@ If you're going for a flexible layout where the Gantt should fill available spac
 ```svelte
 <div style="height: 100%; width: 100%;">
   <Willow>
-    {#if browser}
       <Gantt {tasks} {links} {scales} />
-    {/if}
   </Willow>
 </div>
 ```
@@ -182,7 +172,6 @@ The Gantt component exposes its API through a `bind:this` directive. We can capt
 
 ```svelte
 <script lang="ts">
-  import { browser } from "$app/environment";
   import { Gantt, Willow, Editor } from "@svar-ui/svelte-gantt";
 
   let api = $state<any>(null);
@@ -192,10 +181,8 @@ The Gantt component exposes its API through a `bind:this` directive. We can capt
 
 <div style="height: 100%; width: 100%;">
   <Willow>
-    {#if browser}
       <Gantt {tasks} {links} {scales} bind:this={api} />
       <Editor {api} />
-    {/if}
   </Willow>
 </div>
 ```

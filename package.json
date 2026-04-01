@@ -21,6 +21,6 @@
 		"vite": "^7.2.6"
 	},
 	"dependencies": {
-		"@svar-ui/svelte-gantt": "^2.5.0"
+		"@svar-ui/svelte-gantt": "^2.6.1"
 	}
 }
