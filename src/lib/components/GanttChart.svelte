@@ -8,7 +8,7 @@
   let links = $state<any[]>([]);
 
   //provide url to your server
-  const server = new RestDataProvider("https://gantt-backend.svar.dev");
+  const server = new RestDataProvider("/api");
 
   const scales = [
     { unit: "month", step: 1, format: "%M %Y" },
