@@ -1,42 +1,28 @@
-# sv
+# SVAR Svelte Gantt + SvelteKit Demo
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A demo application showing [SVAR Svelte Gantt](https://svar.dev/svelte/gantt/) integrated into a SvelteKit project. The demo uses the open-source (MIT) version of the component.
 
-## Creating a project
+This demo shows:
+- SvelteKit API routes for backend integration
+- SQLite database (via better-sqlite3)
+- CRUD operations and row reordering via RestDataProvider
+- SVAR Svelte Editor integration for task editing
+- Toolbar integration for common project operations
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Quick Start
 
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv create --template minimal --types ts --no-install .
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+```bash
+git clone https://github.com/svar-widgets/gantt-demo-sveltekit
+cd gantt-demo-sveltekit
+git checkout basic   # or: backend
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Useful Links
 
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Learn more about SVAR Svelte Gantt and find additional resources:
+- [Documentation](https://docs.svar.dev/svelte/gantt/getting_started/)
+- [GitHub](https://github.com/svar-widgets/gantt)
+- [PRO Trial](https://svar.dev/svelte/gantt/#pro)
+- [SVAR Forum](https://forum.svar.dev/) 
