@@ -22,7 +22,7 @@ npm run dev
 ## Useful Links
 
 Learn more about SVAR Svelte Gantt and find additional resources:
-- [Documentation](https://docs.svar.dev/svelte/gantt/getting_started/)
+- [Documentation](https://docs.svar.dev/svelte/gantt/getting-started/quickstart/)
 - [GitHub](https://github.com/svar-widgets/gantt)
 - [PRO Trial](https://svar.dev/svelte/gantt/#pro)
 - [SVAR Forum](https://forum.svar.dev/) 
